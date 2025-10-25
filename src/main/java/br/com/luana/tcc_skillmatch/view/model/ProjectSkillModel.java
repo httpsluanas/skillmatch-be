@@ -5,12 +5,12 @@ import lombok.Data;
 
 @Data
 @Builder
-public class JobSkillModel {
+public class ProjectSkillModel {
     private Integer id;
     private String name;
     private Integer relevance;
 
-    public JobSkillModel(Integer id, String name, Integer relevance) {
+    public ProjectSkillModel(Integer id, String name, Integer relevance) {
         this.id = id;
         this.name = name;
         this.relevance = relevance;

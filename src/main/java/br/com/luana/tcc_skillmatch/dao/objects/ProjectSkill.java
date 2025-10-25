@@ -9,14 +9,14 @@ import java.util.Objects;
 @Entity
 @Getter
 @Setter
-public class JobSkill {
+public class ProjectSkill {
     @EmbeddedId
-    private JobSkillId id;
+    private ProjectSkillId id;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @MapsId("jobId")
-    @JoinColumn(name = "job_id")
-    private Job job;
+    @MapsId("projectId")
+    @JoinColumn(name = "project_id")
+    private Project project;
 
     @ManyToOne(fetch = FetchType.LAZY)
     @MapsId("skillId")
@@ -29,8 +29,8 @@ public class JobSkill {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        JobSkill jobSkill = (JobSkill) o;
-        return Objects.equals(id, jobSkill.id);
+        ProjectSkill projectSkill = (ProjectSkill) o;
+        return Objects.equals(id, projectSkill.id);
     }
 
     @Override

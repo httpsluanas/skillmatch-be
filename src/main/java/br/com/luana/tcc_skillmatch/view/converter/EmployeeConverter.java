@@ -22,7 +22,6 @@ public class EmployeeConverter {
         EmployeeModel.EmployeeModelBuilder builder = EmployeeModel.builder();
         builder.id(entity.getId());
         builder.name(entity.getName());
-        builder.job(entity.getJob());
         builder.skills(entity.getSkills() != null
                 ? entity.getSkills().stream()
                 .map(skillConverter::convert)

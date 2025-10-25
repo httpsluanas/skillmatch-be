@@ -14,8 +14,6 @@ public class Employee {
 
     private String name;
 
-    private String job;
-
     @ManyToMany
     @JoinTable(
             name = "employee_skill",

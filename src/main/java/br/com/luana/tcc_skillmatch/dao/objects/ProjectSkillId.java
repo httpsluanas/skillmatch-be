@@ -9,7 +9,7 @@ import java.io.Serializable;
 @Embeddable
 @Data
 @RequiredArgsConstructor
-public class JobSkillId implements Serializable {
-    private Integer jobId;
+public class ProjectSkillId implements Serializable {
+    private Integer projectId;
     private Integer skillId;
 }

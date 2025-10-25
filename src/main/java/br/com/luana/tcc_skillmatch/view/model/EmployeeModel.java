@@ -10,6 +10,5 @@ import java.util.Set;
 public class EmployeeModel {
     private Integer id;
     private String name;
-    private String job;
     private Set<SkillModel> skills;
 }

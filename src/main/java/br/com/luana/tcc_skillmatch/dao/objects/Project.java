@@ -11,7 +11,7 @@ import java.util.Set;
 @Entity
 @Getter
 @Setter
-public class Job {
+public class Project {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
@@ -19,15 +19,15 @@ public class Job {
     private String title;
     private String description;
 
-    @OneToMany(mappedBy = "job", cascade = CascadeType.ALL, orphanRemoval = true)
-    private Set<JobSkill> jobSkills = new HashSet<>();
+    @OneToMany(mappedBy = "project", cascade = CascadeType.ALL, orphanRemoval = true)
+    private Set<ProjectSkill> projectSkills = new HashSet<>();
 
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        Job job = (Job) o;
-        return id != null && Objects.equals(id, job.id);
+        Project project = (Project) o;
+        return id != null && Objects.equals(id, project.id);
     }
 
     @Override

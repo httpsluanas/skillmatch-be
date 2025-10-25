@@ -7,9 +7,9 @@ import java.util.Set;
 
 @Data
 @Builder
-public class JobModel {
+public class ProjectModel {
     private Integer id;
     private String title;
     private String description;
-    private Set<JobSkillModel> skills;
+    private Set<ProjectSkillModel> skills;
 }
